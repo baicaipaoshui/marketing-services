@@ -1,0 +1,2 @@
+24-08-31.15:39:21.726 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[cn.lxq]' package. Please check your configuration.
+24-08-31.20:54:56.614 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[cn.lxq]' package. Please check your configuration.

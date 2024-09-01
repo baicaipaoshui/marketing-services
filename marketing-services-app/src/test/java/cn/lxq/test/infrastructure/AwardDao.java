@@ -12,8 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * 奖品持久化单元测试
+/** * 奖品持久化单元测试
  */
 @Slf4j
 @RunWith(SpringRunner.class)

@@ -1,0 +1,24 @@
+24-08-31.15:39:21.469 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on baicaipaoshuideMacBook-Pro.local with PID 52333 (/Users/baicaipaoshui/Desktop/marketing-services/marketing-services-app/target/classes started by baicaipaoshui in /Users/baicaipaoshui/Desktop/marketing-services)
+24-08-31.15:39:21.469 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-08-31.15:39:21.726 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[cn.lxq]' package. Please check your configuration.
+24-08-31.15:39:21.885 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-08-31.15:39:21.888 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-08-31.15:39:21.888 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-08-31.15:39:21.888 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-08-31.15:39:21.978 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-08-31.15:39:21.978 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 492 ms
+24-08-31.15:39:22.227 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+24-08-31.15:39:22.239 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+24-08-31.15:39:22.243 [main            ] INFO  Application            - Started Application in 0.969 seconds (JVM running for 1.208)
+24-08-31.20:54:56.320 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on baicaipaoshuideMacBook-Pro.local with PID 80513 (/Users/baicaipaoshui/Desktop/marketing-services/marketing-services-app/target/classes started by baicaipaoshui in /Users/baicaipaoshui/Desktop/marketing-services)
+24-08-31.20:54:56.321 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-08-31.20:54:56.614 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[cn.lxq]' package. Please check your configuration.
+24-08-31.20:54:56.783 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-08-31.20:54:56.786 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-08-31.20:54:56.786 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-08-31.20:54:56.786 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-08-31.20:54:56.857 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-08-31.20:54:56.857 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 515 ms
+24-08-31.20:54:57.104 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+24-08-31.20:54:57.122 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+24-08-31.20:54:57.126 [main            ] INFO  Application            - Started Application in 1.019 seconds (JVM running for 1.37)

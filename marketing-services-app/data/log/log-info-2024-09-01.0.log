@@ -1,0 +1,41 @@
+24-09-01.18:45:45.873 [main            ] INFO  AwardDao               - Starting AwardDao using Java 1.8.0_391 on baicaipaoshuideMacBook-Pro.local with PID 31367 (started by baicaipaoshui in /Users/baicaipaoshui/Desktop/marketing-services/marketing-services-app)
+24-09-01.18:45:45.874 [main            ] INFO  AwardDao               - The following 1 profile is active: "dev"
+24-09-01.18:45:46.919 [main            ] INFO  AwardDao               - Started AwardDao in 1.235 seconds (JVM running for 1.756)
+24-09-01.18:45:47.032 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-09-01.18:45:47.282 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-09-01.18:45:47.311 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-09-01.18:45:47.314 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-09-01.18:55:04.474 [main            ] INFO  AwardDao               - Starting AwardDao using Java 1.8.0_391 on baicaipaoshuideMacBook-Pro.local with PID 44201 (started by baicaipaoshui in /Users/baicaipaoshui/Desktop/marketing-services/marketing-services-app)
+24-09-01.18:55:04.474 [main            ] INFO  AwardDao               - The following 1 profile is active: "dev"
+24-09-01.18:55:05.409 [main            ] INFO  AwardDao               - Started AwardDao in 1.118 seconds (JVM running for 1.48)
+24-09-01.18:55:05.517 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-09-01.18:55:05.745 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-09-01.18:55:05.778 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-09-01.18:55:05.780 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-09-01.18:57:22.674 [main            ] INFO  AwardDao               - Starting AwardDao using Java 1.8.0_391 on baicaipaoshuideMacBook-Pro.local with PID 47143 (started by baicaipaoshui in /Users/baicaipaoshui/Desktop/marketing-services/marketing-services-app)
+24-09-01.18:57:22.674 [main            ] INFO  AwardDao               - The following 1 profile is active: "dev"
+24-09-01.18:57:23.635 [main            ] INFO  AwardDao               - Started AwardDao in 1.151 seconds (JVM running for 1.521)
+24-09-01.18:57:23.748 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-09-01.18:57:23.976 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-09-01.18:57:24.002 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-09-01.18:57:24.004 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-09-01.19:03:02.066 [main            ] INFO  AwardDao               - Starting AwardDao using Java 1.8.0_391 on baicaipaoshuideMacBook-Pro.local with PID 54765 (started by baicaipaoshui in /Users/baicaipaoshui/Desktop/marketing-services/marketing-services-app)
+24-09-01.19:03:02.066 [main            ] INFO  AwardDao               - The following 1 profile is active: "dev"
+24-09-01.19:03:03.014 [main            ] INFO  AwardDao               - Started AwardDao in 1.13 seconds (JVM running for 1.487)
+24-09-01.19:03:03.122 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-09-01.19:03:03.348 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-09-01.19:03:03.460 [main            ] INFO  AwardDao               - 测试结果：[{"awardConfig":"1,100","awardDesc":"用户积分","awardId":101,"awardKey":"user_credit_random","createTime":1725210504000,"id":1,"updateTime":1725210504000},{"awardConfig":"5","awardDesc":"OpenAI增加使用次数","awardId":102,"awardKey":"openai_use_count","createTime":1725210556000,"id":2,"updateTime":1725210556000},{"awardConfig":"10","awardDesc":"OpenAI增加使用次数","awardId":103,"awardKey":"openai_use_count","createTime":1725210594000,"id":3,"updateTime":1725210594000},{"awardConfig":"20","awardDesc":"OpenAI增加使用次数","awardId":104,"awardKey":"openai_use_count","createTime":1725210669000,"id":4,"updateTime":1725210669000},{"awardConfig":"gpt-4","awardDesc":"OpenAI增加模型","awardId":105,"awardKey":"openai_model","createTime":1725210795000,"id":5,"updateTime":1725210795000},{"awardConfig":"dall-e-2","awardDesc":"OpenAI增加模型","awardId":106,"awardKey":"openai_model","createTime":1725210875000,"id":6,"updateTime":1725210875000},{"awardConfig":"100","awardDesc":"OpenAI增加使用次数","awardId":107,"awardKey":"openai_use_count","createTime":1725210917000,"id":7,"updateTime":1725210917000},{"awardConfig":"gpt-4,dall-e-2,dall-e-3","awardDesc":"OpenAI增加模型","awardId":108,"awardKey":"openai_model","createTime":1725210962000,"id":8,"updateTime":1725210962000}]
+24-09-01.19:03:03.466 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-09-01.19:03:03.475 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-09-01.22:58:51.441 [main            ] INFO  ApiTest                - Starting ApiTest using Java 1.8.0_391 on baicaipaoshuideMacBook-Pro.local with PID 75419 (started by baicaipaoshui in /Users/baicaipaoshui/Desktop/project1/marketing-services-app)
+24-09-01.22:58:51.442 [main            ] INFO  ApiTest                - The following 1 profile is active: "dev"
+24-09-01.22:58:51.886 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-09-01.22:58:51.888 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-09-01.22:58:51.901 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+24-09-01.22:58:52.433 [main            ] INFO  Version                - Redisson 3.23.4
+24-09-01.22:58:52.465 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+24-09-01.22:58:52.590 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-09-01.22:58:52.595 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-09-01.22:58:53.495 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-09-01.22:58:53.530 [main            ] INFO  ApiTest                - Started ApiTest in 2.296 seconds (JVM running for 2.682)
+24-09-01.22:58:53.781 [main            ] INFO  ApiTest                - 测试结果:101

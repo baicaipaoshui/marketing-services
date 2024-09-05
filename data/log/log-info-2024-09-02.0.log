@@ -1,0 +1,85 @@
+24-09-02.16:44:37.462 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on baicaipaoshuideMacBook-Pro.local with PID 68572 (/Users/baicaipaoshui/Desktop/project1/marketing-services-app/target/classes started by baicaipaoshui in /Users/baicaipaoshui/Desktop/project1)
+24-09-02.16:44:37.464 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-09-02.16:44:37.923 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-09-02.16:44:37.924 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-09-02.16:44:37.952 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+24-09-02.16:44:38.230 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-09-02.16:44:38.234 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-09-02.16:44:38.235 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-09-02.16:44:38.235 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-09-02.16:44:38.318 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-09-02.16:44:38.318 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 832 ms
+24-09-02.16:44:38.745 [main            ] INFO  Version                - Redisson 3.23.4
+24-09-02.16:44:38.766 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+24-09-02.16:44:38.891 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-09-02.16:44:38.930 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-09-02.16:44:39.241 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-09-02.16:44:39.267 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+24-09-02.16:44:39.270 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8091 is already in use
+24-09-02.16:44:39.291 [main            ] INFO  Http11NioProtocol      - Pausing ProtocolHandler ["http-nio-8091"]
+24-09-02.16:44:39.292 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+24-09-02.16:44:39.293 [main            ] INFO  Http11NioProtocol      - Stopping ProtocolHandler ["http-nio-8091"]
+24-09-02.16:44:39.294 [main            ] INFO  Http11NioProtocol      - Destroying ProtocolHandler ["http-nio-8091"]
+24-09-02.16:44:39.303 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+24-09-02.16:44:39.312 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8091 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8091 or configure this application to listen on another port.
+
+24-09-02.16:45:35.359 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on baicaipaoshuideMacBook-Pro.local with PID 70013 (/Users/baicaipaoshui/Desktop/project1/marketing-services-app/target/classes started by baicaipaoshui in /Users/baicaipaoshui/Desktop/project1)
+24-09-02.16:45:35.360 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-09-02.16:45:35.821 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-09-02.16:45:35.823 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-09-02.16:45:35.849 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+24-09-02.16:45:36.128 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-09-02.16:45:36.132 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-09-02.16:45:36.132 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-09-02.16:45:36.132 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-09-02.16:45:36.213 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-09-02.16:45:36.213 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 829 ms
+24-09-02.16:45:36.650 [main            ] INFO  Version                - Redisson 3.23.4
+24-09-02.16:45:36.672 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+24-09-02.16:45:36.799 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-09-02.16:45:36.830 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-09-02.16:45:37.131 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-09-02.16:45:37.157 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+24-09-02.16:45:37.164 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+24-09-02.16:45:37.176 [main            ] INFO  Application            - Started Application in 2.054 seconds (JVM running for 2.342)
+24-09-02.16:45:37.614 [RMI TCP Connection(1)-127.0.0.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-09-02.16:45:37.614 [RMI TCP Connection(2)-127.0.0.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-09-02.16:45:37.614 [RMI TCP Connection(1)-127.0.0.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-09-02.16:45:37.615 [RMI TCP Connection(1)-127.0.0.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-09-02.16:45:37.814 [RMI TCP Connection(2)-127.0.0.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-09-02.18:49:46.772 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h36m38s722ms).
+24-09-02.19:09:29.762 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m42s991ms).
+24-09-02.19:21:26.557 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m56s796ms).
+24-09-02.19:29:33.853 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s275ms).
+24-09-02.19:45:50.274 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m46s405ms).
+24-09-02.20:01:20.103 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m29s834ms).
+24-09-02.20:17:24.008 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m33s875ms).
+24-09-02.20:33:24.935 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m928ms).
+24-09-02.20:53:30.521 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s215ms).
+24-09-02.21:14:12.466 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m41s887ms).
+24-09-02.21:30:12.326 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m59s843ms).
+24-09-02.21:46:07.267 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s941ms).
+24-09-02.22:00:09.150 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m31s884ms).
+24-09-02.22:16:13.150 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m33s992ms).
+24-09-02.22:30:59.928 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m16s745ms).
+24-09-02.22:50:01.266 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m1s312ms).
+24-09-02.23:03:41.717 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m10s443ms).
+24-09-02.23:20:20.653 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m8s963ms).
+24-09-02.23:24:45.559 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s878ms).
+24-09-02.23:32:03.946 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m18s360ms).
+24-09-02.23:38:59.008 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s914ms).
+24-09-02.23:56:29.144 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s56ms).

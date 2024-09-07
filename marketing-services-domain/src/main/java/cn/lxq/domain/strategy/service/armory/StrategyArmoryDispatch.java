@@ -4,11 +4,11 @@ import cn.lxq.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.lxq.domain.strategy.model.entity.StrategyEntity;
 import cn.lxq.domain.strategy.model.entity.StrategyRuleEntity;
 import cn.lxq.domain.strategy.repository.IStrategyRepository;
+import cn.lxq.types.common.Constants;
 import cn.lxq.types.enums.ResponseCode;
 import cn.lxq.types.exception.AppException;
+import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -21,23 +21,30 @@ import java.util.*;
 @Slf4j
 @Service
 public class StrategyArmoryDispatch implements IStrategyArmory,IStrategyDispatch {
-    private static final Logger logger = LoggerFactory.getLogger(StrategyArmoryDispatch.class);
 
     @Resource
     private IStrategyRepository repository;
 
     @Override
     public boolean assembleLotteryStrategy(Long strategyId) {
+
+
         // 1. 查询策略配置
         List<StrategyAwardEntity> strategyAwardEntities = repository.queryStrategyAwardList(strategyId);
         assembleLotteryStrategy(String.valueOf(strategyId), strategyAwardEntities);
 
         // 2. 权重策略配置 - 适用于 rule_weight 权重规则配置
         StrategyEntity strategyEntity = repository.queryStrategyEntityByStrategyId(strategyId);
+        log.info("策略实体: {}", JSON.toJSONString(strategyEntity));
         String ruleWeight = strategyEntity.getRuleWeight();
-        if (null == ruleWeight) return true;
+        if (null == ruleWeight) {
+            log.warn("策略 {} 没有权重配置，直接返回", strategyId);
+            return true;
+        }
+
 
         StrategyRuleEntity strategyRuleEntity = repository.queryStrategyRule(strategyId, ruleWeight);
+        // 如果说有rule weight  但是查到的对象是空 那么就处理异常
         if (null == strategyRuleEntity) {
             throw new AppException(ResponseCode.STRATEGY_RULE_WEIGHT_IS_NULL.getCode(), ResponseCode.STRATEGY_RULE_WEIGHT_IS_NULL.getInfo());
         }
@@ -47,7 +54,7 @@ public class StrategyArmoryDispatch implements IStrategyArmory,IStrategyDispatch
             List<Integer> ruleWeightValues = ruleWeightValueMap.get(key);
             ArrayList<StrategyAwardEntity> strategyAwardEntitiesClone = new ArrayList<>(strategyAwardEntities);
             strategyAwardEntitiesClone.removeIf(entity -> !ruleWeightValues.contains(entity.getAwardId()));
-            assembleLotteryStrategy(String.valueOf(strategyId).concat("_").concat(key), strategyAwardEntitiesClone);
+            assembleLotteryStrategy(String.valueOf(strategyId).concat(Constants.UNDERLINE).concat(key), strategyAwardEntitiesClone);
         }
 
         return true;
@@ -94,46 +101,19 @@ public class StrategyArmoryDispatch implements IStrategyArmory,IStrategyDispatch
 
     @Override
     public Integer getRandomAwardId(Long strategyId) {
-        logger.debug("Entering getRateRange method.");
-
-        try {
-            // 分布式部署下，不一定为当前应用做的策略装配。也就是值不一定会保存到本应用，而是分布式应用，所以需要从 Redis 中获取。
-            int rateRange = repository.getRateRange(strategyId);
-
-            // 检查是否获取到了合法的范围值
-            if (rateRange <= 0) {
-                logger.error("Invalid rate range for strategyId {}: {}", strategyId, rateRange);
-                throw new IllegalArgumentException("Invalid rate range for the given strategy ID.");
-            }
-
-            // 通过生成的随机值，获取概率值奖品查找表的结果
-            return repository.getStrategyAwardAssemble(String.valueOf(strategyId), new SecureRandom().nextInt(rateRange));
-        } catch (NullPointerException e) {
-            logger.error("Null value encountered while fetching rate range for strategyId: {}", strategyId, e);
-            throw e;
-        }
+        // 分布式部署下，不一定为当前应用做的策略装配。也就是值不一定会保存到本应用，而是分布式应用，所以需要从 Redis 中获取。
+        int rateRange = repository.getRateRange(strategyId);
+        // 通过生成的随机值，获取概率值奖品查找表的结果
+        return repository.getStrategyAwardAssemble(String.valueOf(strategyId), new SecureRandom().nextInt(rateRange));
     }
 
     @Override
     public Integer getRandomAwardId(Long strategyId, String ruleWeightValue) {
-        String key = String.valueOf(strategyId).concat("_").concat(ruleWeightValue);
-
-        try {
-            // 分布式部署下，不一定为当前应用做的策略装配。也就是值不一定会保存到本应用，而是分布式应用，所以需要从 Redis 中获取。
-            int rateRange = repository.getRateRange(key);
-
-            // 检查是否获取到了合法的范围值
-            if (rateRange <= 0) {
-                logger.error("Invalid rate range for key {}: {}", key, rateRange);
-                throw new IllegalArgumentException("Invalid rate range for the given key.");
-            }
-
-            // 通过生成的随机值，获取概率值奖品查找表的结果
-            return repository.getStrategyAwardAssemble(key, new SecureRandom().nextInt(rateRange));
-        } catch (NullPointerException e) {
-            logger.error("Null value encountered while fetching rate range for key: {}", key, e);
-            throw e;
-        }
+        String key = String.valueOf(strategyId).concat(Constants.UNDERLINE).concat(ruleWeightValue);
+        // 分布式部署下，不一定为当前应用做的策略装配。也就是值不一定会保存到本应用，而是分布式应用，所以需要从 Redis 中获取。
+        int rateRange = repository.getRateRange(key);
+        // 通过生成的随机值，获取概率值奖品查找表的结果
+        return repository.getStrategyAwardAssemble(key, new SecureRandom().nextInt(rateRange));
     }
 
 }

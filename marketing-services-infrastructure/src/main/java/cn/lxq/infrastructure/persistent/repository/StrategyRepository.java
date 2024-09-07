@@ -3,6 +3,7 @@ package cn.lxq.infrastructure.persistent.repository;
 import cn.lxq.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.lxq.domain.strategy.model.entity.StrategyEntity;
 import cn.lxq.domain.strategy.model.entity.StrategyRuleEntity;
+import cn.lxq.domain.strategy.model.vo.StrategyAwardRuleModelVO;
 import cn.lxq.domain.strategy.repository.IStrategyRepository;
 import cn.lxq.infrastructure.persistent.dao.IStrategyAwardDao;
 import cn.lxq.infrastructure.persistent.dao.IStrategyDao;
@@ -86,6 +87,7 @@ public class StrategyRepository implements IStrategyRepository {
         StrategyEntity strategyEntity = redisService.getValue(cacheKey);
         if (null != strategyEntity) return strategyEntity;
         Strategy strategy = strategyDao.queryStrategyByStrategyId(strategyId);
+        if (null == strategy) return StrategyEntity.builder().build();
         strategyEntity = StrategyEntity.builder()
                 .strategyId(strategy.getStrategyId())
                 .strategyDesc(strategy.getStrategyDesc())
@@ -119,4 +121,14 @@ public class StrategyRepository implements IStrategyRepository {
         strategyRule.setRuleModel(ruleModel);
         return strategyRuleDao.queryStrategyRuleValue(strategyRule);
     }
+
+    @Override
+    public StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId) {
+        StrategyAward strategyAward = new StrategyAward();
+        strategyAward.setStrategyId(strategyId);
+        strategyAward.setAwardId(awardId);
+        String ruleModels = strategyAwardDao.queryStrategyAwardRuleModels(strategyAward);
+        return StrategyAwardRuleModelVO.builder().ruleModels(ruleModels).build();
+    }
+
 }

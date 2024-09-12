@@ -4187,3 +4187,23 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infr
 24-09-07.23:21:40.323 [main            ] WARN  StrategyArmoryDispatch - 策略 100002 没有权重配置，直接返回
 24-09-07.23:21:40.325 [main            ] WARN  StrategyArmoryDispatch - 策略 100003 没有权重配置，直接返回
 24-09-07.23:21:40.339 [main            ] WARN  RuleBackListLogicFilter - Rule value is empty or null.
+24-09-12.18:33:33.516 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+24-09-12.18:33:35.218 [main            ] WARN  StrategyArmoryDispatch - 策略 100002 没有权重配置，直接返回
+24-09-12.18:33:35.220 [main            ] WARN  StrategyArmoryDispatch - 策略 100003 没有权重配置，直接返回
+24-09-12.18:33:51.944 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+24-09-12.18:33:53.474 [main            ] WARN  StrategyArmoryDispatch - 策略 100002 没有权重配置，直接返回
+24-09-12.18:33:53.475 [main            ] WARN  StrategyArmoryDispatch - 策略 100003 没有权重配置，直接返回
+24-09-12.18:40:25.356 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+24-09-12.18:40:26.837 [main            ] WARN  StrategyArmoryDispatch - 策略 100002 没有权重配置，直接返回
+24-09-12.18:40:26.839 [main            ] WARN  StrategyArmoryDispatch - 策略 100003 没有权重配置，直接返回
+24-09-12.18:44:11.872 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+24-09-12.18:44:13.407 [main            ] WARN  StrategyArmoryDispatch - 策略 100002 没有权重配置，直接返回
+24-09-12.18:44:13.408 [main            ] WARN  StrategyArmoryDispatch - 策略 100003 没有权重配置，直接返回
+24-09-12.18:44:44.142 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+24-09-12.18:44:46.103 [main            ] WARN  StrategyArmoryDispatch - 策略 100002 没有权重配置，直接返回
+24-09-12.18:44:46.105 [main            ] WARN  StrategyArmoryDispatch - 策略 100003 没有权重配置，直接返回
+24-09-12.18:45:55.438 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+24-09-12.18:47:11.799 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+24-09-12.18:47:16.603 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+24-09-12.18:47:19.699 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+24-09-12.18:49:12.372 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'

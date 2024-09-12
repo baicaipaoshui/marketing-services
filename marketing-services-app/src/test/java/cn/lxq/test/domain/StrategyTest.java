@@ -14,11 +14,15 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.annotation.Resource;
 import java.util.*;
 
+/**
+ * @author Fuzhengwei bugstack.cn @小傅哥
+ * @description 策略领域测试
+ * @create 2023-12-23 11:33
+ */
 @Slf4j
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
-public class StrategyArmoryTest {
-
+public class StrategyTest {
 
     @Resource
     private IStrategyArmory strategyArmory;
@@ -40,7 +44,7 @@ public class StrategyArmoryTest {
      */
     @Test
     public void test_getRandomAwardId() {
-        log.info("测试结果：{} - 奖品ID值", strategyDispatch.getRandomAwardId(100001L));
+         log.info("测试结果：{} - 奖品ID值", strategyDispatch.getRandomAwardId(100001L));
     }
 
     /**

@@ -1,4 +1,4 @@
-package cn.lxq.domain.strategy.service.raffle;
+package cn.lxq.domain.strategy.service;
 /**
  * 抽奖策略抽象类
  */
@@ -7,16 +7,15 @@ import cn.lxq.domain.strategy.model.entity.RaffleAwardEntity;
 import cn.lxq.domain.strategy.model.entity.RaffleFactorEntity;
 import cn.lxq.domain.strategy.model.entity.RuleActionEntity;
 import cn.lxq.domain.strategy.model.entity.StrategyEntity;
-import cn.lxq.domain.strategy.model.vo.RuleLogicCheckTypeVO;
+import cn.lxq.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
+import cn.lxq.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import cn.lxq.domain.strategy.repository.IStrategyRepository;
-import cn.lxq.domain.strategy.service.IRaffleStrategy;
 import cn.lxq.domain.strategy.service.armory.IStrategyDispatch;
 import cn.lxq.domain.strategy.service.rule.factory.DefaultLogicFactory;
 import cn.lxq.types.enums.ResponseCode;
 import cn.lxq.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import cn.lxq.domain.strategy.model.vo.StrategyAwardRuleModelVO;
 @Slf4j
 public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
 

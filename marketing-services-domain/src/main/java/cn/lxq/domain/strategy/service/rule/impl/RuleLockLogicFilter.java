@@ -2,7 +2,7 @@ package cn.lxq.domain.strategy.service.rule.impl;
 
 import cn.lxq.domain.strategy.model.entity.RuleActionEntity;
 import cn.lxq.domain.strategy.model.entity.RuleMatterEntity;
-import cn.lxq.domain.strategy.model.vo.RuleLogicCheckTypeVO;
+import cn.lxq.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import cn.lxq.domain.strategy.repository.IStrategyRepository;
 import cn.lxq.domain.strategy.service.annotation.LogicStrategy;
 import cn.lxq.domain.strategy.service.rule.ILogicFilter;

@@ -3,7 +3,7 @@ package cn.lxq.infrastructure.persistent.repository;
 import cn.lxq.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.lxq.domain.strategy.model.entity.StrategyEntity;
 import cn.lxq.domain.strategy.model.entity.StrategyRuleEntity;
-import cn.lxq.domain.strategy.model.vo.StrategyAwardRuleModelVO;
+import cn.lxq.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import cn.lxq.domain.strategy.repository.IStrategyRepository;
 import cn.lxq.infrastructure.persistent.dao.IStrategyAwardDao;
 import cn.lxq.infrastructure.persistent.dao.IStrategyDao;
@@ -20,7 +20,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/*策略仓储实现*/
+/**
+ * @author Fuzhengwei bugstack.cn @小傅哥
+ * @description 策略服务仓储实现
+ * @create 2023-12-23 10:33
+ */
 @Repository
 public class StrategyRepository implements IStrategyRepository {
 
@@ -111,6 +115,11 @@ public class StrategyRepository implements IStrategyRepository {
                 .ruleValue(strategyRuleRes.getRuleValue())
                 .ruleDesc(strategyRuleRes.getRuleDesc())
                 .build();
+    }
+
+    @Override
+    public String queryStrategyRuleValue(Long strategyId, String ruleModel) {
+        return queryStrategyRuleValue(strategyId, null, ruleModel);
     }
 
     @Override

@@ -4,8 +4,8 @@ import cn.lxq.domain.strategy.model.entity.RaffleAwardEntity;
 import cn.lxq.domain.strategy.model.entity.RaffleFactorEntity;
 import cn.lxq.domain.strategy.service.IRaffleStrategy;
 import cn.lxq.domain.strategy.service.armory.IStrategyArmory;
+import cn.lxq.domain.strategy.service.rule.chain.impl.RuleWeightLogicChain;
 import cn.lxq.domain.strategy.service.rule.impl.RuleLockLogicFilter;
-import cn.lxq.domain.strategy.service.rule.impl.RuleWeightLogicFilter;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
@@ -17,20 +17,24 @@ import org.springframework.test.util.ReflectionTestUtils;
 
 import javax.annotation.Resource;
 
+/**
+ * @author Fuzhengwei bugstack.cn @小傅哥
+ * @description 抽奖策略测试
+ * @create 2024-01-06 13:28
+ */
 @Slf4j
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 public class RaffleStrategyTest {
-
 
     @Resource
     private IStrategyArmory strategyArmory;
     @Resource
     private IRaffleStrategy raffleStrategy;
     @Resource
-    private RuleWeightLogicFilter ruleWeightLogicFilter;
-    @Resource
     private RuleLockLogicFilter ruleLockLogicFilter;
+    @Resource
+    private RuleWeightLogicChain ruleWeightLogicChain;
 
     @Before
     public void setUp() {
@@ -40,8 +44,9 @@ public class RaffleStrategyTest {
         log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100003L));
 
         // 通过反射 mock 规则中的值
-        ReflectionTestUtils.setField(ruleWeightLogicFilter, "userScore", 40500L);
         ReflectionTestUtils.setField(ruleLockLogicFilter, "userRaffleCount", 10L);
+        // 通过反射 mock 规则中的值
+        ReflectionTestUtils.setField(ruleWeightLogicChain, "userScore", 4900L);
     }
 
     @Test

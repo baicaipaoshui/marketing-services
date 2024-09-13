@@ -3,6 +3,7 @@ package cn.lxq.domain.strategy.repository;
 import cn.lxq.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.lxq.domain.strategy.model.entity.StrategyEntity;
 import cn.lxq.domain.strategy.model.entity.StrategyRuleEntity;
+import cn.lxq.domain.strategy.model.valobj.RuleTreeVO;
 import cn.lxq.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 
 import java.util.List;
@@ -30,4 +31,5 @@ public interface IStrategyRepository {
 
     StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId);
 
+    RuleTreeVO queryRuleTreeVOByTreeId(String treeLock);
 }

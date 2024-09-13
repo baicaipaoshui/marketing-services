@@ -5603,3 +5603,30 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infr
 24-09-12.18:49:13.487 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_stock code:0001
 24-09-12.18:49:13.488 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_luck_award code:0001
 24-09-12.18:49:13.578 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":101,"awardRuleValue":"1,100"}
+24-09-12.21:52:03.582 [main            ] INFO  StrategyRepositoryTest - Starting StrategyRepositoryTest using Java 1.8.0_391 on baicaipaoshuideMacBook-Pro.local with PID 28449 (started by baicaipaoshui in /Users/baicaipaoshui/Desktop/project1/marketing-services-app)
+24-09-12.21:52:03.583 [main            ] INFO  StrategyRepositoryTest - The following 1 profile is active: "dev"
+24-09-12.21:52:04.018 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-09-12.21:52:04.020 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-09-12.21:52:04.040 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+24-09-12.21:52:04.735 [main            ] INFO  Version                - Redisson 3.23.4
+24-09-12.21:52:04.770 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+24-09-12.21:52:04.900 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-09-12.21:52:04.906 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-09-12.21:52:05.663 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-09-12.21:52:05.693 [main            ] INFO  StrategyRepositoryTest - Started StrategyRepositoryTest in 2.296 seconds (JVM running for 2.77)
+24-09-12.21:53:03.067 [main            ] INFO  StrategyRepositoryTest - Starting StrategyRepositoryTest using Java 1.8.0_391 on baicaipaoshuideMacBook-Pro.local with PID 29754 (started by baicaipaoshui in /Users/baicaipaoshui/Desktop/project1/marketing-services-app)
+24-09-12.21:53:03.067 [main            ] INFO  StrategyRepositoryTest - The following 1 profile is active: "dev"
+24-09-12.21:53:03.497 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-09-12.21:53:03.498 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-09-12.21:53:03.518 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-09-12.21:53:04.213 [main            ] INFO  Version                - Redisson 3.23.4
+24-09-12.21:53:04.246 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+24-09-12.21:53:04.385 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-09-12.21:53:04.390 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-09-12.21:53:05.137 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-09-12.21:53:05.168 [main            ] INFO  StrategyRepositoryTest - Started StrategyRepositoryTest in 2.285 seconds (JVM running for 2.724)
+24-09-12.21:53:05.365 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-09-12.21:53:05.577 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-09-12.21:53:05.717 [main            ] INFO  StrategyRepositoryTest - 测试结果：{"treeDesc":"规则树","treeId":"tree_lock","treeName":"规则树","treeNodeMap":{"rule_lock":{"ruleDesc":"限定用户已完成N次抽奖后解锁","ruleKey":"rule_lock","ruleValue":"1","treeId":"tree_lock","treeNodeLineVOList":[{"ruleLimitType":"EQUAL","ruleLimitValue":"ALLOW","ruleNodeFrom":"rule_lock","ruleNodeTo":"rule_stock","treeId":"tree_lock"},{"ruleLimitType":"EQUAL","ruleLimitValue":"TAKE_OVER","ruleNodeFrom":"rule_lock","ruleNodeTo":"rule_luck_award","treeId":"tree_lock"}]},"rule_stock":{"ruleDesc":"库存扣减规则","ruleKey":"rule_stock","treeId":"tree_lock","treeNodeLineVOList":[{"ruleLimitType":"EQUAL","ruleLimitValue":"TAKE_OVER","ruleNodeFrom":"rule_stock","ruleNodeTo":"rule_luck_award","treeId":"tree_lock"}]},"rule_luck_award":{"ruleDesc":"兜底奖品随机积分","ruleKey":"rule_luck_award","ruleValue":"1,100","treeId":"tree_lock"}},"treeRootRuleNode":"rule_lock"}
+24-09-12.21:53:05.736 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-09-12.21:53:05.741 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

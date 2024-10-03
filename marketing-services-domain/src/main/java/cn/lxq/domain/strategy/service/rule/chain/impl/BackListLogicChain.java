@@ -14,6 +14,7 @@ import javax.annotation.Resource;
  * @description 黑名单责任链
  * @create 2024-01-20 10:23
  */
+
 @Slf4j
 @Component("rule_blacklist")
 public class BackListLogicChain extends AbstractLogicChain {
@@ -51,4 +52,5 @@ public class BackListLogicChain extends AbstractLogicChain {
     protected String ruleModel() {
         return DefaultChainFactory.LogicModel.RULE_BLACKLIST.getCode();
     }
+
 }

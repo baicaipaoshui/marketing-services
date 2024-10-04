@@ -1,9 +1,9 @@
 package cn.lxq.infrastructure.persistent.redis;
 
 
-
-
+import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.*;
+import org.redisson.client.RedisException;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,6 +14,7 @@ import java.time.Duration;
  *
  * @author Fuzhengwei bugstack.cn @小傅哥
  */
+@Slf4j
 @Service("redissonService")
 public class RedissonService implements IRedisService {
 
@@ -50,6 +51,27 @@ public class RedissonService implements IRedisService {
     }
 
     @Override
+    public void setAtomicLong(String key, long value) {
+        if (value < 0) {
+            throw new IllegalArgumentException("Value must be non-negative");
+        }
+        redissonClient.getAtomicLong(key).set(value);
+        log.info("Set value {} for key {} in Redis", value, key);
+    }
+    @Override
+    public Long getAtomicLong(String key) {
+        try {
+            return redissonClient.getAtomicLong(key).get();
+        } catch (RedisException e) {
+            log.error("Failed to get atomic long for key: {}", key, e);
+            return null;
+        }
+    }
+
+
+
+
+    @Override
     public long incr(String key) {
         return redissonClient.getAtomicLong(key).incrementAndGet();
     }
@@ -61,9 +83,18 @@ public class RedissonService implements IRedisService {
 
     @Override
     public long decr(String key) {
-        return redissonClient.getAtomicLong(key).decrementAndGet();
+        try {
+            RAtomicLong atomicLong = redissonClient.getAtomicLong(key);
+            if (atomicLong.isExists()) {
+                return atomicLong.decrementAndGet();
+            } else {
+                throw new RedisException("Key does not exist: " + key);
+            }
+        } catch (RedisException e) {
+            log.error("Failed to decrement key: {}", key, e);
+            throw e;
+        }
     }
-
     @Override
     public long decrBy(String key, long delta) {
         return redissonClient.getAtomicLong(key).addAndGet(-delta);
@@ -160,19 +191,8 @@ public class RedissonService implements IRedisService {
     }
 
     @Override
-    public Long getAtomicLong(String key) {
-        return redissonClient.getAtomicLong(key).get();
-    }
-
-    @Override
-    public void setAtomicLong(String key, Integer value) {
-        redissonClient.getAtomicLong(key).set(value);
-    }
-
-    @Override
     public Boolean setNx(String key) {
         return redissonClient.getBucket(key).trySet("lock");
     }
-
 
 }

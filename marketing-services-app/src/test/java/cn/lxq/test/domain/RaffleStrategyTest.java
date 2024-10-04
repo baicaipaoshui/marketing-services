@@ -18,7 +18,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import javax.annotation.Resource;
-import java.util.concurrent.CountDownLatch;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
@@ -55,7 +54,7 @@ public class RaffleStrategyTest {
 
     @Test
     public void test_performRaffle() throws InterruptedException {
-        for (int i = 0; i < 3; i++) {
+
             RaffleFactorEntity raffleFactorEntity = RaffleFactorEntity.builder()
                     .userId("xiaofuge")
                     .strategyId(100006L)
@@ -65,10 +64,11 @@ public class RaffleStrategyTest {
 
             log.info("请求参数：{}", JSON.toJSONString(raffleFactorEntity));
             log.info("测试结果：{}", JSON.toJSONString(raffleAwardEntity));
-        }
+
+
 
         // 等待 UpdateAwardStockJob 消费队列
-        new CountDownLatch(1).await();
+        //new CountDownLatch(1).await();
     }
 
     @Test
@@ -92,7 +92,7 @@ public class RaffleStrategyTest {
     public void test_raffle_center_rule_lock() {
         RaffleFactorEntity raffleFactorEntity = RaffleFactorEntity.builder()
                 .userId("xiaofuge")
-                .strategyId(100003L)
+                .strategyId(100001L)
                 .build();
 
         RaffleAwardEntity raffleAwardEntity = raffleStrategy.performRaffle(raffleFactorEntity);

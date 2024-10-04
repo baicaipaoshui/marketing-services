@@ -3,13 +3,13 @@ package cn.lxq.domain.strategy.service;
 import cn.lxq.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 
 /**
- * 抽奖库存相关服务，获取库存消耗队列
+ * 抽奖库存相关服务，获取库存消耗队列o
  */
 public interface IRaffleStock {
 
     /**
      * 获取奖品库存消耗队列
-     *
+
      * @return 奖品库存Key信息
      * @throws InterruptedException 异常
      */
